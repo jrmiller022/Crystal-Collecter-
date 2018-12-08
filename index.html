@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<link href="assets/css/reset.css" rel="stylesheet">
+	<link href="assets/css/style.css" rel="stylesheet">
+	<title>Crystal Collector Game</title>
+</head>
+<body>
+	<!--heading of page-->
+	<div class="heading">
+		<h1>Crystal Collector!</h1>
+	</div>
+	<!--Instruction of Game-->
+	<div class="instructions">
+		<h1>There will be a random number at the start of the game.</h1><br>
+		<h1>By clicking one of the 4 crystals your points will add up depending of what crystal you click on.</h1><br>
+		<h1>If you match your points to what the random number is above, you will win the game!</h1><br>
+		<h1>There is a hidden value to each crystal.</h1><br>
+		<h1>The random number will change each time you start a game.</h1><br>
+		<h1>GOOD LUCK!!!</h1>
+	</div>
+	<!--Random number-->
+	<div class="random number">
+		<p>random number</p>
+	</div>
+	<!--images for game-->
+	<div class="background">
+		<div><img alt="blue crystal" height="100" src="assets/images/blue%20crystal.png" width="100"> <img alt="green crystal" height="100" src="assets/images/green%20crystal.jpeg" width="100"> <img alt="red crystal" height="100" src="assets/images/red%20crystal.ico" width="100"> <img alt="yellow crystal" height="100" src="assets/images/yellow%20crystal.png" width="100"></div>
+	</div>
+	<!--Scoring of Game-->
+	<div id="scoreboard">
+		<div class="sidebar">
+			<h1>Your total score is: <span id="guessesremaining"></span></h1>
+		</div>
+		<script src="assets/javascript/game.js" type="text/javascript">
+		</script> 
+	</div>
+</body>
+</html>
