@@ -1,22 +1,33 @@
 //variables
-var randomNumber = "";
+var randomNumber = 0;
 var wins = 0;
 var losses = 0;
-var counter = 0;
 var images = ["assets/images/blue%20crystal.png","assets/images/green%20crystal.jpeg","assets/images/red%20crystal.ico","assets/images/yellow%20crystal.png"];
 
-//display random number in number generater
+//display random number in number generater function
+function number(min, max) {
+    randomNumber = Math.floor(Math.random() * ((max - min) + 1) + min);
+    return randomNumber;
+}
 
+// Calling function called number to append random number
+$(".random-number").append(number(120, 19));
 
 //when user clicks on image, the stored number will display
+$("#one").on("click", function() {
+    total = total + num1;
+    console.log("New total = " + num1);
+    $('#guessesremaining').text(counter);
+})
 
-
-
+    
 //score will display and add in the score area
-
+$("#col-md-4").text(wins);
+$("#col-md-4").text(losses);
 
 
 //when user matches the random number the user wins
+
 
 
 

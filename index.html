@@ -17,7 +17,7 @@
 	</div><!--Instruction of Game-->
 	<div class="instructions">
 		<p>There will be a random number at the start of the game.</p><br>
-		<p>By clicking one of the 4 crystals your points will add up depending of what crystal you click on.</p><br>
+		<p>By clicking one of the 4 crystals, your points will add up depending on what crystal you click on.</p><br>
 		<p>If you match your points to what the random number is above, you will win the game!</p><br>
 		<p>There is a hidden value to each crystal.</p><br>
 		<p>The random number will change each time you start a game.</p><br>
@@ -25,8 +25,8 @@
 	</div>
 	<!--Random number-->
 		<div class="row">
-			<div class="randomnumber col-md-4">
-				<p>Random number</p>
+			<div class="random-number col-md-4">
+				<p>Random number:</p>
 			</div>
 			<div class="col-md-4">
 				<p>Wins:</p>
@@ -34,11 +34,15 @@
 			</div>
 		</div>
 	</div><!--images for game-->
-	<div class="background">
-		<div><img alt="blue crystal" height="100" src="assets/images/blue%20crystal.png" width="100"> <img alt="green crystal" height="100" src="assets/images/green%20crystal.jpeg" width="100"> <img alt="red crystal" height="100" src="assets/images/red%20crystal.ico" width="100"> <img alt="yellow crystal" height="100" src="assets/images/yellow%20crystal.png" width="100"></div>
+	<div class="images">
+		<div><img src="assets/images/blue%20crystal.png" id= "one" alt="blue crystal" height="100"  width="100"> 
+			 <img src="assets/images/green%20crystal.jpeg" id= "two" alt="green crystal" height="100"  width="100"> 
+			 <img src="assets/images/red%20crystal.ico" id= "three" alt="red crystal" height="100"  width="100"> 
+			 <img src="assets/images/yellow%20crystal.png" id= "four" alt="yellow crystal" height="100"  width="100">
+		</div>
 	</div><!--Scoring of Game-->
 	<div id="scoreboard">
-		<div class="sidebar">
+		<div class="total">
 			<p>Your total score: <span id="guessesremaining"></span></p>
 		</div>
 		<script src="assets/javascript/game.js" type="text/javascript">
