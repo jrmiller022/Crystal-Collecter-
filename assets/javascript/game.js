@@ -14,10 +14,16 @@ function number(min, max) {
 $(".random-number").append(number(120, 19));
 
 //when user clicks on image, the stored number will display
-$("#one").on("click", function() {
-    total = total + num1;
-    console.log("New total = " + num1);
-    $('#guessesremaining').text(counter);
+var counter = 0;
+$(".crystal-image").on("click", function() {
+    counter = counter + 1;
+    alert("new score: " + counter);
+    if (counter === randomNumber) {
+        alert("You Win!");
+    }
+    else if(counter >= randomNumber) {
+        alert("You lose!");
+    }
 })
 
     
