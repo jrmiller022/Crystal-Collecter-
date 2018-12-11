@@ -10,18 +10,9 @@ function number(min, max) {
 };
 
 // Calling function called number to append random number
+// Reset Random number and Your total score.
 var gamble = number(120, 19);
 $(".random-number").append(gamble);
-
-// function reset(){
-//     num1= Math.floor(Math.random()*11+1);
-//     num2= Math.floor(Math.random()*11+1);
-//     num3= Math.floor(Math.random()*11+1);
-//     num4= Math.floor(Math.random()*11+1);
-//     userTotal= 0;
-//     $('#guesses-remaining').append(number(11, 1));
-
-// };
 
 //when user clicks on image, the stored number will display
 var counter = 0;
@@ -48,18 +39,17 @@ $("#two").on("click", function() {
     var secondCrystal = number(10, 1);
     counter = counter + secondCrystal;
     $("#one").append(secondCrystal);
-    alert("Your total score: " + counter);
-    $("#scoreboard").text(scoreboard);
+    $("#guesses-remaining").text(counter);
 
-    if (counter === randomNumber) {
+    if (counter === gamble) {
         alert("You Win!");
         wins++;
-        $("#win").text(wins);
+        $("#wins").text(wins);
     }
-    else if(counter > randomNumber) {
+    else if(counter > gamble) {
         alert("You lose!");
         losses++;
-        $("#lose").text(losses);
+        $("#losses").text(losses);
     };
 
 });
@@ -68,16 +58,17 @@ $("#three").on("click", function() {
     var thirdCrystal = number(10, 1);
     counter = counter + thirdCrystal;
     $("#one").append(thirdCrystal);
-    alert("Your total score: " + counter);
-    $("#scoreboard").text(scoreboard);
+    $("#guesses-remaining").text(counter);
 
-    if (counter === randomNumber) {
+    if (counter === gamble) {
         alert("You Win!");
+        wins++;
+        $("#wins").text(wins);
     }
-    else if(counter > randomNumber) {
+    else if(counter > gamble) {
         alert("You lose!");
         losses++;
-        $("#lose").text(losses);
+        $("#losses").text(losses);
     };
 
 });
@@ -86,16 +77,17 @@ $("#four").on("click", function() {
     var fourthCrystal = number(10, 1);
     counter = counter + fourthCrystal;
     $("#one").append(fourthCrystal);
-    alert("Your total score: " + counter);
-    $("#scoreboard").text(scoreboard);
+    $("#guesses-remaining").text(counter);
     
-    if (counter === randomNumber) {
+    if (counter === gamble) {
         alert("You Win!");
+        wins++;
+        $("#wins").text(wins);
     }
-    else if(counter > randomNumber) {
+    else if(counter > gamble) {
         alert("You lose!");
         losses++;
-        $("#lose").text(losses);
+        $("#losses").text(losses);
     };
 
 }); 
