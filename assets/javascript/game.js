@@ -1,3 +1,4 @@
+$(document).ready(function() {
 //variables
 var wins = 0;
 var losses = 0;
@@ -11,7 +12,7 @@ function number(min, max) {
 
 // Calling function called number to append random number
 
-var gamble = number(120, 19);
+    var gamble = number(120, 19);
 $(".random-number").append(gamble);
 
 //when user clicks on image, the stored number will display
@@ -22,13 +23,11 @@ $("#one").on("click", function() {
     $("#guesses-remaining").text(counter);
     
     if (counter === gamble) {
-        alert("You Win!");
         wins++;
         $("#wins").text(wins);
         reset();
     }
     else if(counter > gamble) {
-        alert("You lose!");
         losses++;
         $("#losses").text(losses);
         reset();
@@ -44,13 +43,11 @@ $("#two").on("click", function() {
     $("#guesses-remaining").text(counter);
 
     if (counter === gamble) {
-        alert("You Win!");
         wins++;
         $("#wins").text(wins);
         reset();
     }
     else if(counter > gamble) {
-        alert("You lose!");
         losses++;
         $("#losses").text(losses);
         reset();
@@ -65,13 +62,11 @@ $("#three").on("click", function() {
     $("#guesses-remaining").text(counter);
 
     if (counter === gamble) {
-        alert("You Win!");
         wins++;
         $("#wins").text(wins);
         reset();
     }
     else if(counter > gamble) {
-        alert("You lose!");
         losses++;
         $("#losses").text(losses);
         reset();
@@ -86,13 +81,11 @@ $("#four").on("click", function() {
     $("#guesses-remaining").text(counter);
     
     if (counter === gamble) {
-        alert("You Win!");
         wins++;
         $("#wins").text(wins);
         reset();
     }
     else if(counter > gamble) {
-        alert("You lose!");
         losses++;
         $("#losses").text(losses);
         reset();
@@ -103,8 +96,13 @@ $("#four").on("click", function() {
 // Reset Random number and Your total score.
 function reset(){
     var counter = 0;
-    var gamble = number(120, 19);
-    $(".random-number, #guesses-remaining").empty();
+    function number(min, max) {
+        randomNumber = Math.floor(Math.random() * ((max - min) + 1) + min);
+        return randomNumber;
+}
     $(".random-number").append(gamble);
+    $(".random-number, #guesses-remaining").empty();
+    $(".random-number").append(randomNumber);
     $("#guesses-remaining").append(counter);
-};
+    }
+});
