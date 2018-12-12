@@ -13,12 +13,12 @@ function number(min, max) {
 // Calling function called number to append random number
 
     var gamble = number(120, 19);
-$(".random-number").append(gamble);
+$("#game").append(gamble);
 
 //when user clicks on image, the stored number will display
 var counter = 0;
 $("#one").on("click", function() {
-    var firstCrystal = number(10, 1);
+    var firstCrystal = number(5, 5);
     counter = counter + firstCrystal;
     $("#guesses-remaining").text(counter);
     
@@ -37,7 +37,7 @@ $("#one").on("click", function() {
 
 
 $("#two").on("click", function() {
-    var secondCrystal = number(10, 1);
+    var secondCrystal = number(10, 10);
     counter = counter + secondCrystal;
     $("#one").append(secondCrystal);
     $("#guesses-remaining").text(counter);
@@ -56,7 +56,7 @@ $("#two").on("click", function() {
 });
 
 $("#three").on("click", function() {
-    var thirdCrystal = number(10, 1);
+    var thirdCrystal = number(1, 1);
     counter = counter + thirdCrystal;
     $("#one").append(thirdCrystal);
     $("#guesses-remaining").text(counter);
@@ -75,7 +75,7 @@ $("#three").on("click", function() {
 });
 
 $("#four").on("click", function() {
-    var fourthCrystal = number(10, 1);
+    var fourthCrystal = number(2, 2);
     counter = counter + fourthCrystal;
     $("#one").append(fourthCrystal);
     $("#guesses-remaining").text(counter);
@@ -95,14 +95,10 @@ $("#four").on("click", function() {
 
 // Reset Random number and Your total score.
 function reset(){
-    var counter = 0;
-    function number(min, max) {
-        randomNumber = Math.floor(Math.random() * ((max - min) + 1) + min);
-        return randomNumber;
-}
-    $(".random-number").append(gamble);
-    $(".random-number, #guesses-remaining").empty();
-    $(".random-number").append(randomNumber);
+    counter = 0;
+    gamble = number(120, 19);
+    $("#game").text(gamble);
     $("#guesses-remaining").append(counter);
-    }
+ }
+    
 });
