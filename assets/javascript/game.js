@@ -10,7 +10,7 @@ function number(min, max) {
 };
 
 // Calling function called number to append random number
-// Reset Random number and Your total score.
+
 var gamble = number(120, 19);
 $(".random-number").append(gamble);
 
@@ -25,11 +25,13 @@ $("#one").on("click", function() {
         alert("You Win!");
         wins++;
         $("#wins").text(wins);
+        reset();
     }
     else if(counter > gamble) {
         alert("You lose!");
         losses++;
         $("#losses").text(losses);
+        reset();
     };
 
 });
@@ -45,11 +47,13 @@ $("#two").on("click", function() {
         alert("You Win!");
         wins++;
         $("#wins").text(wins);
+        reset();
     }
     else if(counter > gamble) {
         alert("You lose!");
         losses++;
         $("#losses").text(losses);
+        reset();
     };
 
 });
@@ -64,11 +68,13 @@ $("#three").on("click", function() {
         alert("You Win!");
         wins++;
         $("#wins").text(wins);
+        reset();
     }
     else if(counter > gamble) {
         alert("You lose!");
         losses++;
         $("#losses").text(losses);
+        reset();
     };
 
 });
@@ -83,12 +89,22 @@ $("#four").on("click", function() {
         alert("You Win!");
         wins++;
         $("#wins").text(wins);
+        reset();
     }
     else if(counter > gamble) {
         alert("You lose!");
         losses++;
         $("#losses").text(losses);
+        reset();
     };
 
 }); 
 
+// Reset Random number and Your total score.
+function reset(){
+    var counter = 0;
+    var gamble = number(120, 19);
+    $(".random-number, #guesses-remaining").empty();
+    $(".random-number").append(gamble);
+    $("#guesses-remaining").append(counter);
+};
