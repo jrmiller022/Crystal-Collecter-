@@ -16,10 +16,10 @@ Crystal Collecter guess game.
 
 ### Images of game.
 
-! [alt text](assets/images/top-pick.png)
+![alt text](assets/images/top-pick.png)
 
-! [alt text](assets/images/second-pic.png)
+![alt text](assets/images/second-pic.png)
 
-! [alt text](assets/images/third-pic.png)
+![alt text](assets/images/third-pic.png)
 
 ### Link to crystal game https://jrmiller022.github.io/unit-4-game/
