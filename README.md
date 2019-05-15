@@ -12,4 +12,14 @@ Crystal Collecter guess game.
 
 5. You will have a Wins, Loses, and totall score.
 
-6. Link to crystal game https://jrmiller022.github.io/unit-4-game/
+### This app was built with HTML, CSS, javascript.
+
+### Images of game.
+
+! [alt text](assets/images/top-pick.png)
+
+! [alt text](assets/images/second-pic.png)
+
+! [alt text](assets/images/third-pic.png)
+
+### Link to crystal game https://jrmiller022.github.io/unit-4-game/
